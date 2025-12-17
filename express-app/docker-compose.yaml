@@ -1,0 +1,16 @@
+services:
+  express:
+    image: index.docker.io/fall0utboy/express-app:latest
+    ports:
+      - 8080:8080
+    container_name: express
+
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=60
+      - WATCHTOWER_LABEL_ENABLE=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+#      - /home/ingvar/.docker/config.json:/config.json
+    container_name: watchtower
