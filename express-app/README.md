@@ -1,3 +1,1 @@
-## express app
-
-Access with browser http://localhost:8080
+My solution to exercise 3.11 of the Docker For Devops course.
